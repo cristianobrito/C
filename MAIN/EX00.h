@@ -15,5 +15,6 @@ void EX00_1(void);
 void EX6_2(void);
 void teste(void);
 void meuNome(void);
+void tamanhoDaVariavel(void);
 
 #endif // EX00

@@ -82,8 +82,23 @@ void teste(void)
         x++;
     }
 }
-
+// ##################################################################
 void meuNome(void)
 {
-    printf("meu nome e Cristiano sou programador");
+    printf("meu nome e Cristiano sou programador\n\n");
+}
+// ######################### PG 253 ###################################
+
+void tamanhoDaVariavel(void)
+{
+    char c = 'c';
+    int i = 123;
+    float f = 98.6;
+    double d = 6.022E23;
+
+    printf("TAMANHO DAS VARIAVEIS DESSE PC:\n");
+    printf("char\t%u\n", sizeof(c));
+    printf("int\t%u\n", sizeof(i));
+    printf("float\t%u\n", sizeof(f));
+    printf("double\t%u\n", sizeof(d));
 }
