@@ -82,3 +82,8 @@ void teste(void)
         x++;
     }
 }
+
+void meuNome(void)
+{
+    printf("meu nome e Cristiano sou programador");
+}

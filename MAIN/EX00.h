@@ -14,5 +14,6 @@ void EX00(void);
 void EX00_1(void);
 void EX6_2(void);
 void teste(void);
+void meuNome(void);
 
 #endif // EX00
