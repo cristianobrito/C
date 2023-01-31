@@ -103,6 +103,27 @@ void tamanhoDaVariavel(void)
     printf("float\t%u\n", sizeof(f));
     printf("double\t%u\ n", sizeof(d));
 }
+// ************************** PG 78 - 85 ********************************
+void nopode(void)
+{
+    unsigned int ono;
+    ono = -10;
+    printf("o valor e %u esse numero e erro\n", ono);  // variavel inteira com numeros negativos, não pode unsigned
+}
+
+void pg84()
+{
+    int c;
+    printf("espero um caractere: ");
+    c = getchar();
+    printf("peguei o caractere %c\n", c);
+}
+// **********************************************************************
+/*  Protótipos para getchar();
+    int	                   getchar	     (void)
+    Valor de retorno	Nome da função	Argumento
+*/
+// **********************************************************************
 // ######################### AULA DE PONTEIROS ##########################
 
 void trabalhoPonteiro(void)

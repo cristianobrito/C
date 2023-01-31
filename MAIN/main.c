@@ -11,6 +11,7 @@ void teste(void);
 void meuNome(void);
 void tamanhoDaVariavel(void);
 void trabalhoPonteiro(void);
+void nopode(void);
 int main()
 {
     CONFIG();
@@ -21,5 +22,7 @@ int main()
     meuNome();
     tamanhoDaVariavel();
     trabalhoPonteiro();
+    nopode();
+    pg84();
     return 0;
 }

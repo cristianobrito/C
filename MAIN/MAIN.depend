@@ -1,13 +1,13 @@
 # depslib dependency file v1.0
-1675107843 source:c:\users\brito\desktop\monstro\main\main.c
+1675176087 source:c:\users\brito\desktop\monstro\main\main.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
 	"EX00.h"
 
-1675107661 c:\users\brito\desktop\monstro\main\ex00.h
+1675177147 c:\users\brito\desktop\monstro\main\ex00.h
 
-1675108087 source:c:\users\brito\desktop\monstro\main\ex00.c
+1675177105 source:c:\users\brito\desktop\monstro\main\ex00.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
