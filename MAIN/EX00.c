@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <conio.h>
 #include "EX00.h"
 
 #define AUTOR "CRISTIANO"   // declara uma constante
@@ -100,5 +101,28 @@ void tamanhoDaVariavel(void)
     printf("char\t%u\n", sizeof(c));
     printf("int\t%u\n", sizeof(i));
     printf("float\t%u\n", sizeof(f));
-    printf("double\t%u\n", sizeof(d));
+    printf("double\t%u\ n", sizeof(d));
+}
+// ######################### AULA DE PONTEIROS ##########################
+
+void trabalhoPonteiro(void)
+{
+    int v[10];
+    char nome[] = "onze de setembro";
+    char *pn;
+    int  *pv;
+
+    pv=&v[0];
+    pn=&nome[0];
+
+    for(int b=0; b<10; b++){
+        v[b] = b*b;
+    }
+    for(int b=0; b<10; b++){
+        printf("\n%d %d",*pv++, v[b]);
+    }
+    while(*pn){
+        printf("\n%c", *pn++);
+    }
+
 }

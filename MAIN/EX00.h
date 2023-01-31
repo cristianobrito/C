@@ -16,5 +16,6 @@ void EX6_2(void);
 void teste(void);
 void meuNome(void);
 void tamanhoDaVariavel(void);
+void trabalhoPonteiro(void);
 
 #endif // EX00
