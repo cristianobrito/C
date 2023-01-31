@@ -12,6 +12,7 @@ void meuNome(void);
 void tamanhoDaVariavel(void);
 void trabalhoPonteiro(void);
 void nopode(void);
+void pg84();
 int main()
 {
     CONFIG();
