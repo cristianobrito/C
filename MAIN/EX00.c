@@ -147,3 +147,56 @@ void trabalhoPonteiro(void)
     }
 
 }
+// ******************** PONTEIRO PARA ESTRUTURAS *****************************
+void ponteiroestrutura(void)
+{
+    struct horario{
+        int hora;
+        int minuto;
+        int segundo;
+        int *phora;
+        int *pminuto;
+        int *psegundo;
+
+    };
+    struct horario agora, hoje, *depois;
+
+    int hora    = 200;
+    int minuto  = 300;
+    int segundo = 300;
+
+    depois = &agora;
+
+    depois->hora    = 10;
+    depois->minuto  = 20;
+    depois->segundo = 30;
+
+    hoje.phora = hora&
+
+    printf("\n%i : %i : %i\n", agora.hora, agora.minuto, agora.segundo);
+}
+//********************* PONTEIROS ***********************************************
+void ponteirosdeestruturas(void)
+{
+        struct horario{
+            int *phora;
+            int *pminuto;
+            int *psegundo;
+        };
+    struct horario hoje;
+
+    int hora    = 200;
+    int minuto  = 300;
+    int segundo = 300;
+
+    hoje.phora    = &hora;
+    hoje.pminuto  = &minuto;
+    hoje.psegundo = &segundo;
+
+    printf("HORA:    %i\n", *hoje.phora);
+    printf("MINUTO:  %i\n", *hoje.pminuto);
+    printf("SEGUNDO: %i\n", *hoje.psegundo);
+
+    *hoje.psegundo=1000;
+    printf("SEGUNDO ALTERADO: %i\n", *hoje.psegundo);
+}

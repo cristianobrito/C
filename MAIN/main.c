@@ -13,6 +13,8 @@ void tamanhoDaVariavel(void);
 void trabalhoPonteiro(void);
 void nopode(void);
 void pg84();
+void ponteiroestrutura(void);
+void ponteirosdeestruturas(void);
 int main()
 {
     CONFIG();
@@ -25,5 +27,7 @@ int main()
     trabalhoPonteiro();
     nopode();
     pg84();
+    ponteiroestrutura();
+    ponteirosdeestruturas();
     return 0;
 }

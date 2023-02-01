@@ -19,4 +19,6 @@ void tamanhoDaVariavel(void);
 void trabalhoPonteiro(void);
 void nopode(void);
 void pg84();
+void ponteiroestrutura(void);
+void ponteirosdeestruturas(void);
 #endif // EX00
