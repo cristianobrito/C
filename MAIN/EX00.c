@@ -46,11 +46,13 @@ void EX00_1(void)
 /** PG:74 - 75 **/
 void EX6_2(void)
 {
+    // DECLARAÇÃO VARIAVEIS
     char   c;
     int    i;
     float  f;
     double d;
 
+    // INICIALIZAÇÃO DA VARIAVEIS
     c = 'a';
     i = 1;
     f = 19.0;
@@ -74,7 +76,7 @@ void EX6_2(void)
 void teste(void)
 {
     char falando[] = "\tOla novo mundo porra\b\b\b\b\bapaguei\n\tcaralho\b\b\b\b\b\b\b puta\b\b\b\b\btomar no\b\bcu\b\bsuco\r\r\n\tagora foram\r\n\tremovidos os palavroes\r\r\f\f";
-    int x = 0;
+    int x = 0;    // SÓ UM CONTADOR
 
     while(falando[x] != '\0')
     {
@@ -92,30 +94,30 @@ void meuNome(void)
 
 void tamanhoDaVariavel(void)
 {
-    char c = 'c';
-    int i = 123;
-    float f = 98.6;
+    char c   = 'c';
+    int i    = 123;
+    float f  = 98.6;
     double d = 6.022E23;
 
     printf("TAMANHO DAS VARIAVEIS DESSE PC:\n");
-    printf("char\t%u\n", sizeof(c));
-    printf("int\t%u\n", sizeof(i));
-    printf("float\t%u\n", sizeof(f));
-    printf("double\t%u\ n", sizeof(d));
+    printf("char  \t%u\n", sizeof(c));
+    printf("int   \t%u\n", sizeof(i));
+    printf("float \t%u\n", sizeof(f));
+    printf("double\t%u\n", sizeof(d));
 }
 // ************************** PG 78 - 85 ********************************
 void nopode(void)
 {
     unsigned int ono;
     ono = -10;
-    printf("o valor e %u esse numero e erro\n", ono);  // variavel inteira com numeros negativos, não pode unsigned
+    // variavel inteira com numeros negativos, não pode unsigned
+    printf("o valor e %u esse numero e erro\n", ono);
 }
-
 void pg84()
 {
     int c;
     printf("espero um caractere: ");
-    c = getchar();
+    c = getchar();     // USO DA FUNÇÃO GETCHAR();
     printf("peguei o caractere %c\n", c);
 }
 // **********************************************************************
@@ -130,16 +132,16 @@ void trabalhoPonteiro(void)
 {
     int v[10];
     char nome[] = "onze de setembro";
-    char *pn;
+    char *pn;    //CRIA OS PONTEIROS
     int  *pv;
 
-    pv=&v[0];
-    pn=&nome[0];
+    pv=&v[0];    // LEMBRE PONTEIRO SO ACEITA ENDEREÇOS DE MEMORIA
+    pn=&nome[0]; // para pegar o char devemos iniciar na sua primeira posição nesse caso a zero [0]
 
-    for(int b=0; b<10; b++){
+    for(int b=0;b<10;b++){
         v[b] = b*b;
     }
-    for(int b=0; b<10; b++){
+    for(int b=0;b<10;b++){
         printf("\n%d %d",*pv++, v[b]);
     }
     while(*pn){
@@ -154,12 +156,8 @@ void ponteiroestrutura(void)
         int hora;
         int minuto;
         int segundo;
-        int *phora;
-        int *pminuto;
-        int *psegundo;
-
     };
-    struct horario agora, hoje, *depois;
+    struct horario agora, *depois;
 
     int hora    = 200;
     int minuto  = 300;
@@ -167,11 +165,9 @@ void ponteiroestrutura(void)
 
     depois = &agora;
 
-    depois->hora    = 10;
+    depois->hora    = 10;  // acessando os menbros da estruturo pelo ponteiro
     depois->minuto  = 20;
     depois->segundo = 30;
-
-    hoje.phora = hora&
 
     printf("\n%i : %i : %i\n", agora.hora, agora.minuto, agora.segundo);
 }
@@ -179,24 +175,24 @@ void ponteiroestrutura(void)
 void ponteirosdeestruturas(void)
 {
         struct horario{
-            int *phora;
+            int *phora;     // ponteiros dentro de estruturas
             int *pminuto;
             int *psegundo;
         };
-    struct horario hoje;
+    struct horario hoje;    // cria uma variavel do tipo horario
 
     int hora    = 200;
     int minuto  = 300;
     int segundo = 300;
 
-    hoje.phora    = &hora;
-    hoje.pminuto  = &minuto;
+    hoje.phora    = &hora;  // minha estrutura hoje acessa seus menbros que são ponteiros do tipo horario
+    hoje.pminuto  = &minuto;// pega o endereço de memoria das variaveis
     hoje.psegundo = &segundo;
 
     printf("HORA:    %i\n", *hoje.phora);
     printf("MINUTO:  %i\n", *hoje.pminuto);
     printf("SEGUNDO: %i\n", *hoje.psegundo);
 
-    *hoje.psegundo=1000;
+    *hoje.psegundo=1000;    // alterando o valor em tempo de execução
     printf("SEGUNDO ALTERADO: %i\n", *hoje.psegundo);
 }
