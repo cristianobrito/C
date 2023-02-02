@@ -235,3 +235,23 @@ void ponteirosdeestruturas(void)
     *hoje.psegundo=1000;    // alterando o valor em tempo de execução
     printf("SEGUNDO ALTERADO: %i\n", *hoje.psegundo);
 }
+
+// ************************ PG 254 ************************************
+void PG254(void)
+{
+    char string[] = "qual o tamanho de um array: ";
+    printf("a string \"%s\" tem o temanho %u.\n", string,sizeof(string)); // SEZEOF MOSTRA O TAMANHO
+}
+
+// ************************ PG 255 ************************************
+void PG255(void)
+{
+    struct robot{
+        int alive;
+        char name[5];
+        int xpos;
+        int ypos;
+        int strength;
+    };
+    printf("tamanho da estruct robot %u.\n", sizeof(struct robot));     // %u OPERADOR DE SIZE OF
+}

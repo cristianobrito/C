@@ -17,6 +17,8 @@ void PG86(void);
 void PG89(void);
 void PG91(void);
 void PG94(void);
+void PG254(void);
+void PG255(void);
 void ponteiroestrutura(void);
 void ponteirosdeestruturas(void);
 int main()
@@ -35,6 +37,8 @@ int main()
     PG89();
     PG91();
     PG94();
+    PG254();
+    PG255();
     ponteiroestrutura();
     ponteirosdeestruturas();
     return 0;
