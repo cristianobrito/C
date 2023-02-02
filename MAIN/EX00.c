@@ -126,6 +126,45 @@ void pg84()
     Valor de retorno	Nome da função	Argumento
 */
 // **********************************************************************
+// ************************* PG 86 **************************************
+void PG86(void)
+{
+    int ch;
+    printf("Press Enter: ");
+    getchar();
+    ch = 'H';
+    putchar(ch);             // COLOCA UM UNICO CARACTERE NA SAIDA PADRÃO
+    ch = 'i';
+    putchar(ch);             // ELE RECEBE UM CARACTERE LITERAL DENTRO DOS PARENTESIS
+    putchar('!');
+}
+// ***********************************************************************
+
+// ************************* PG 89 ***************************************
+void PG89(void)
+{
+    char prompt[] = "Tecle enter para explodir: ";
+    printf("\n%s", prompt);                          // CARACTERE DE CONVERSÃO DE STRING %S
+    getchar();                                     // PAUSA O PROGRAMA
+}
+
+// ************************* PG 91 ***************************************
+void PG91(void)
+{
+    char nome[15];
+    printf("DIGITE SEU NOME: ");
+    scanf("%s", nome);                     // SCANF() LE A ENTRADA DO TECLADO
+    printf("Seja Bem Vindo %s.\n", nome);
+}
+
+// ************************* PG 94 ***************************************
+void PG94(void)
+{
+    char nome[10];                          // QNATIDADE DE ENTRADA DE TEXTO + 1
+    printf("Quem e voce? ");
+    fgets(nome,10,stdin);                   // FGETS LE UM A MENOS PORTANTO 9
+    printf("eu sou %s.\n", nome);           // EXIBE
+}
 // ######################### AULA DE PONTEIROS ##########################
 
 void trabalhoPonteiro(void)
