@@ -1,16 +1,26 @@
-#include <stdio.h>
+/*
+*   --- REFATORADO 2023 ---
+*   -TAB 4 OU 2 ESPAÇOS
+*   -USANDO A TABULAÇÃO DO PYTHON
+*   -USANDO AS PAGINAS PARA MARCAR
+*   -USANDO FUNÇÕES E ARQUIVOS EXTERNOS
+*   -CRIANDO UMA DOCUMENTAÇÃO
+*   -COMENTARIOS NA COLUNA 40 OU 80 EM LINHAS MAIORES
+*/
+
+#include <stdio.h>                     // IMPORTAÇÕES DAS BIBLIOTECAS
 #include <stdlib.h>
 #include <conio.h>
-#include "EX00.h"
+#include "EX00.h"                      // MEU ARQUIVO.H
 
-#define AUTOR "CRISTIANO"   // declara uma constante
+#define AUTOR "CRISTIANO"              // DECLARA UMA CONSTANTE
 
 /** CONFIGURACAO **/
 void CONFIG(void)
 {
-    system("title C PARA LEIGOS");  // titulo da  janela
-    system("color 1e");             // cor da janela
-    printf("\t\t%s", AUTOR);
+    system("title C PARA LEIGOS");     // TITULO DA JANELA
+    system("color 1e");                // COR DA JANELA
+    printf("\t\t%s", AUTOR);           // TABULAÇÃO USA A CONSTANTE AUTOR
     puts("\n");
 }
 /** APRESENTACAO **/
@@ -22,7 +32,7 @@ void EX00(void)
    while(apresentar[x] != '\0')
    {
        putchar(apresentar[x]);
-       usleep(1);        // use sleep(500); e Sleep(500); com windows.h
+       usleep(1);                      // use sleep(500); e Sleep(500); com windows.h
        x++;
    }
     puts("\n");
@@ -34,37 +44,35 @@ void EX00_1(void)
     char fala[] = "AKILLES\nJOYCE\nNANO\n";
     int  y = 0;
 
-    while(fala[y] != '\0')
+    while(fala[y] != '\0')             // CARACTERE NULO \0 FIM DA PALAVRA
     {
         putchar(fala[y]);
-        usleep(55000);     // milesegundos setados
+        usleep(55000);                 // MILESEGUNDOS SETADOS
         y++;
     }
     puts("\n");
 }
 
 /** PG:74 - 75 **/
-void EX6_2(void)
+void EX00_2(void)
 {
-    // DECLARAÇÃO VARIAVEIS
-    char   c;
-    int    i;
-    float  f;
-    double d;
+    char   c;                          // DECLARAÇÃO DE VARIAVEIS
+    int    i;                          // DECLARAÇÃO DE VARIAVEIS
+    float  f;                          // DECLARAÇÃO DE VARIAVEIS
+    double d;                          // DECLARAÇÃO DE VARIAVEIS
 
-    // INICIALIZAÇÃO DA VARIAVEIS
-    c = 'a';
-    i = 1;
-    f = 19.0;
-    d = 20000.009;
+    c = 'a';                           // INICIALIZAÇÃO DE VARIAVEIS
+    i = 1;                             // INICIALIZAÇÃO DE VARIAVEIS
+    f = 19.0;                          // INICIALIZAÇÃO DE VARIAVEIS
+    d = 20000.009;                     // INICIALIZAÇÃO DE VARIAVEIS
 
-    printf("%c\n",c);   // %c char
-    printf("%d\n",i);   // %d ou %i int
-    printf("%f\n",f);   // %f float ou double
-    printf("%f\n",d);   // %f float ou double
+    printf("%c\n",c);                  // %c char
+    printf("%d\n",i);                  // %d ou %i int
+    printf("%f\n",f);                  // %f float ou double
+    printf("%f\n",d);                  // %f float ou double
     puts("\n");
 }
-/**
+/************************************************************
     \b retrocesso
     \f alimentaçao de formulario
     \r retorno de carro
@@ -72,27 +80,27 @@ void EX6_2(void)
     \v tabulação vertical
     \a alerta
     \n nova linha
-**/
-void teste(void)
+**************************************************************/
+void EX00_3(void)
 {
     char falando[] = "\tOla novo mundo porra\b\b\b\b\bapaguei\n\tcaralho\b\b\b\b\b\b\b puta\b\b\b\b\btomar no\b\bcu\b\bsuco\r\r\n\tagora foram\r\n\tremovidos os palavroes\r\r\f\f";
-    int x = 0;    // SÓ UM CONTADOR
+    int x = 0;                         // SÓ UM CONTADOR
 
     while(falando[x] != '\0')
     {
         putchar(falando[x]);
-        sleep(1);           // usleep(5000);
+        sleep(1);                      // usleep(5000);
         x++;
     }
 }
-// ##################################################################
-void meuNome(void)
+//***************************************************************
+void EX00_4(void)
 {
     printf("meu nome e Cristiano sou programador\n\n");
 }
-// ######################### PG 253 ###################################
+//***************************************************************
 
-void tamanhoDaVariavel(void)
+void EX00_5(void)
 {
     char c   = 'c';
     int i    = 123;
@@ -100,24 +108,24 @@ void tamanhoDaVariavel(void)
     double d = 6.022E23;
 
     printf("TAMANHO DAS VARIAVEIS DESSE PC:\n");
-    printf("char  \t%u\n", sizeof(c));
+    printf("char  \t%u\n", sizeof(c)); // sizeof() EXIBE O TAMANHO DAS VARIAVEIS STRUCTS ETC...
     printf("int   \t%u\n", sizeof(i));
     printf("float \t%u\n", sizeof(f));
     printf("double\t%u\n", sizeof(d));
 }
 // ************************** PG 78 - 85 ********************************
-void nopode(void)
+void EX00_6(void)
 {
     unsigned int ono;
     ono = -10;
-    // variavel inteira com numeros negativos, não pode unsigned
+    // VARIAVEL INTEIRA COM NUMEROS NEGATIVOS, NÃO PODE unsigned
     printf("o valor e %u esse numero e erro\n", ono);
 }
-void pg84()
+void EX00_7()
 {
     int c;
     printf("espero um caractere: ");
-    c = getchar();     // USO DA FUNÇÃO GETCHAR();
+    c = getchar();                     // USO DA FUNÇÃO GETCHAR();
     printf("peguei o caractere %c\n", c);
 }
 // **********************************************************************
@@ -127,55 +135,55 @@ void pg84()
 */
 // **********************************************************************
 // ************************* PG 86 **************************************
-void PG86(void)
+void EX00_8(void)
 {
     int ch;
     printf("Press Enter: ");
     getchar();
     ch = 'H';
-    putchar(ch);             // COLOCA UM UNICO CARACTERE NA SAIDA PADRÃO
+    putchar(ch);                       // COLOCA UM UNICO CARACTERE NA SAIDA PADRÃO
     ch = 'i';
-    putchar(ch);             // ELE RECEBE UM CARACTERE LITERAL DENTRO DOS PARENTESIS
+    putchar(ch);                       // ELE RECEBE UM CARACTERE LITERAL DENTRO DOS PARENTESIS
     putchar('!');
 }
 // ***********************************************************************
 
 // ************************* PG 89 ***************************************
-void PG89(void)
+void EX00_9(void)
 {
     char prompt[] = "Tecle enter para explodir: ";
-    printf("\n%s", prompt);                          // CARACTERE DE CONVERSÃO DE STRING %S
-    getchar();                                     // PAUSA O PROGRAMA
+    printf("\n%s", prompt);            // CARACTERE DE CONVERSÃO DE STRING %S
+    getchar();                         // PAUSA O PROGRAMA
 }
 
 // ************************* PG 91 ***************************************
-void PG91(void)
+void EX00_10(void)
 {
     char nome[15];
     printf("DIGITE SEU NOME: ");
-    scanf("%s", nome);                     // SCANF() LE A ENTRADA DO TECLADO
+    scanf("%s", nome);                 // SCANF() LE A ENTRADA DO TECLADO
     printf("Seja Bem Vindo %s.\n", nome);
 }
 
 // ************************* PG 94 ***************************************
-void PG94(void)
+void EX00_11(void)
 {
-    char nome[10];                          // QNATIDADE DE ENTRADA DE TEXTO + 1
+    char nome[10];                     // QUANTIDADE DE ENTRADA DE TEXTO + 1
     printf("Quem e voce? ");
-    fgets(nome,10,stdin);                   // FGETS LE UM A MENOS PORTANTO 9
-    printf("eu sou %s.\n", nome);           // EXIBE
+    fgets(nome,10,stdin);              // FGETS LE UM A MENOS PORTANTO 9
+    printf("eu sou %s.\n", nome);      // EXIBE
 }
-// ######################### AULA DE PONTEIROS ##########################
 
-void trabalhoPonteiro(void)
+// ************************ AULA DE PONTEIROS ****************************
+void EX00_12(void)
 {
     int v[10];
     char nome[] = "onze de setembro";
-    char *pn;    //CRIA OS PONTEIROS
-    int  *pv;
+    char *pn;                          // CRIA OS PONTEIROS LE SE PONTEIRO PRA CHAR
+    int  *pv;                          // CRIA OS PONTEIROS LE SE PONTEIRO PRA INT
 
-    pv=&v[0];    // LEMBRE PONTEIRO SO ACEITA ENDEREÇOS DE MEMORIA
-    pn=&nome[0]; // para pegar o char devemos iniciar na sua primeira posição nesse caso a zero [0]
+    pv=&v[0];                          // LEMBRE PONTEIRO SO ACEITA ENDEREÇOS DE MEMORIA
+    pn=&nome[0];                       // SEMPRE INICIAMOS PEGANDO A PRIMEIRA POSIÇÃO DE UM CHAR[0]
 
     for(int b=0;b<10;b++){
         v[b] = b*b;
@@ -188,63 +196,64 @@ void trabalhoPonteiro(void)
     }
 
 }
+
 // ******************** PONTEIRO PARA ESTRUTURAS *****************************
-void ponteiroestrutura(void)
+void EX00_13(void)
 {
     struct horario{
         int hora;
         int minuto;
         int segundo;
     };
-    struct horario agora, *depois;
+    struct horario agora, *depois;     // CRIA 2 STRUTURAS DO TIPO HORARIO SENDO UMA UM POTEIRO PRA HORARIO
 
     int hora    = 200;
     int minuto  = 300;
     int segundo = 300;
 
-    depois = &agora;
+    depois = &agora;                   // & OPERADOR DE LOCAL DE MEMORIA
 
-    depois->hora    = 10;  // acessando os menbros da estruturo pelo ponteiro
+    depois->hora    = 10;              // ACESSANDO OS MENBROS DA ESTRUTURA PELO PONTEIRO
     depois->minuto  = 20;
     depois->segundo = 30;
 
     printf("\n%i : %i : %i\n", agora.hora, agora.minuto, agora.segundo);
 }
 //********************* PONTEIROS ***********************************************
-void ponteirosdeestruturas(void)
+void EX00_14(void)
 {
         struct horario{
-            int *phora;     // ponteiros dentro de estruturas
+            int *phora;                // PONTEIROS DENTRO DE STRUCTS
             int *pminuto;
             int *psegundo;
         };
-    struct horario hoje;    // cria uma variavel do tipo horario
+    struct horario hoje;               // CRIA UMA VARIAVEL DO TIPO HORARIO COM O NOME "HOJE"
 
     int hora    = 200;
     int minuto  = 300;
     int segundo = 300;
 
-    hoje.phora    = &hora;  // minha estrutura hoje acessa seus menbros que são ponteiros do tipo horario
-    hoje.pminuto  = &minuto;// pega o endereço de memoria das variaveis
+    hoje.phora    = &hora;             // STRUCT HOJE ACESSANDO SEUS MENBROS DO TIPO PONTEIROS PRA HORARIO
+    hoje.pminuto  = &minuto;           // ENDERÇO DE MEMORIA DAS VARIAVEIS
     hoje.psegundo = &segundo;
 
     printf("HORA:    %i\n", *hoje.phora);
     printf("MINUTO:  %i\n", *hoje.pminuto);
     printf("SEGUNDO: %i\n", *hoje.psegundo);
 
-    *hoje.psegundo=1000;    // alterando o valor em tempo de execução
+    *hoje.psegundo=1000;               // ALTERA O VALOR EM TEMPO DE EXECUÇÃO
     printf("SEGUNDO ALTERADO: %i\n", *hoje.psegundo);
 }
 
 // ************************ PG 254 ************************************
-void PG254(void)
+void EX00_15(void)
 {
     char string[] = "qual o tamanho de um array: ";
-    printf("a string \"%s\" tem o temanho %u.\n", string,sizeof(string)); // SEZEOF MOSTRA O TAMANHO
+    printf("a string \"%s\" tem o tamanho %u.\n", string,sizeof(string));      // SIZEOF MOSTRA O TAMANHO
 }
 
 // ************************ PG 255 ************************************
-void PG255(void)
+void EX00_16(void)
 {
     struct robot{
         int alive;
@@ -253,5 +262,5 @@ void PG255(void)
         int ypos;
         int strength;
     };
-    printf("tamanho da estruct robot %u.\n", sizeof(struct robot));     // %u OPERADOR DE SIZE OF
+    printf("tamanho da estruct robot %u.\n", sizeof(struct robot));            // %u OPERADOR DE SIZE OF
 }
