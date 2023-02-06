@@ -264,3 +264,15 @@ void EX00_16(void)
     };
     printf("tamanho da estruct robot %u.\n", sizeof(struct robot));            // %u OPERADOR DE SIZE OF
 }
+
+// ************************ PG 98 ************************************
+void EX00_17()
+{
+    int a,b;
+    a=5;
+    b= a - 3;
+    if(a > b)
+    {
+        printf("%d e maior que %d\n", a,b);
+    }
+}

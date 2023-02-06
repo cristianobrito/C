@@ -3,6 +3,9 @@
 #include <conio.h>
 #include "EX00.h"                      // CAMINHO PARCIAL OU COMPLETO SE ESTIVER FORA DA PASTA
 
+// COMENTEI O TRECHO ABAIXO POIS NÃO PRECISO COLOCAR OS PROTOTIPOS AQUI
+// SÓ PRECISO DOS PROTOTIPOS E STRUCTS NO ARQUIVO .H
+/*
 void CONFIG(void);
 void EX00(void);
 void EX00_1(void);
@@ -21,13 +24,15 @@ void EX00_15(void);
 void EX00_16(void);
 void EX00_13(void);
 void EX00_14(void);
+*/
+
 int main()
 {
     CONFIG();
     EX00();
     EX00_1();
     EX00_2();
-    EX00_3();                          // descomente para ver removendo os palavroes
+    //EX00_3();                          // descomente para ver removendo os palavroes
     EX00_4();
     EX00_5();
     EX00_12();
@@ -41,5 +46,6 @@ int main()
     EX00_16();
     EX00_13();
     EX00_14();
+    EX00_17();
     return 0;
 }

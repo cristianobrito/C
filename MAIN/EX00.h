@@ -8,6 +8,8 @@
 #ifndef EX00_INCLUDED                  // ATENÇÃO O _INCLUDED DEVE ESTAR NA DECLARAÇÃO
 #define EX00_INCLUDED
 
+
+
 /** prototipos **/
 void CONFIG(void);                     // CONFIGURAÇÃO INICIAL COR ETC.. DA JANELA
 void EX00(void);                       // APRESENTAÇÃO COM SLEEP
@@ -27,4 +29,5 @@ void EX00_15(void);                    // SIZEOF PRA TAMANHO DA STRING
 void EX00_16(void);                    // SIZEOF PRA TAMANHO DA STRUCT
 void EX00_13(void);                    // CRIA STRUCT HORARIO  E UM PONTEIRO DO MESMO TIPO STRUCT HORARIO
 void EX00_14(void);                    // CRIA PONTEIROS DENTRO DE ESTRUTURAS E USA ELES COM ->
+void EX00_17();                        // IF E ELSE TOMADA DE DECISÕES SIMPLES UMA DECISÃO
 #endif // EX00
