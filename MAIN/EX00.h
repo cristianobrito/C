@@ -1,16 +1,16 @@
-/**
+/**********************************************************************
 *   qualquer duvida preste atenção na hora de criar um arquivo .h
 *   note que o prorpio codeblocks adiciona o _INCLUDED então devemos
 *   colocar.
 *   ainda tenho que aprender adicionar arquivos externos
 *
-**/
+**********************************************************************/
 #ifndef EX00_INCLUDED                  // ATENÇÃO O _INCLUDED DEVE ESTAR NA DECLARAÇÃO
 #define EX00_INCLUDED
 
-
-
-/** prototipos **/
+/**********************************************************************
+*                       prototipos
+***********************************************************************/
 void CONFIG(void);                     // CONFIGURAÇÃO INICIAL COR ETC.. DA JANELA
 void EX00(void);                       // APRESENTAÇÃO COM SLEEP
 void EX00_1(void);                     // USA UM WHILE PRA ESCREVER LETRA POR LETRA
@@ -30,4 +30,6 @@ void EX00_16(void);                    // SIZEOF PRA TAMANHO DA STRUCT
 void EX00_13(void);                    // CRIA STRUCT HORARIO  E UM PONTEIRO DO MESMO TIPO STRUCT HORARIO
 void EX00_14(void);                    // CRIA PONTEIROS DENTRO DE ESTRUTURAS E USA ELES COM ->
 void EX00_17();                        // IF E ELSE TOMADA DE DECISÕES SIMPLES UMA DECISÃO
+void EX00_18();                        // TOMADA DE DECISÃO SIMPLES COMPARANDO VALORES
+void EX00_19();                        // DEFINE UMA CONSTANTE E COMPARA OS VALORES
 #endif // EX00
