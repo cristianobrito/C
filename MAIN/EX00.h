@@ -32,4 +32,5 @@ void EX00_14(void);                    // CRIA PONTEIROS DENTRO DE ESTRUTURAS E 
 void EX00_17();                        // IF E ELSE TOMADA DE DECISÕES SIMPLES UMA DECISÃO
 void EX00_18();                        // TOMADA DE DECISÃO SIMPLES COMPARANDO VALORES
 void EX00_19();                        // DEFINE UMA CONSTANTE E COMPARA OS VALORES
+void EX00_20();                        // A SAIDA PODE CONFUNDIR
 #endif // EX00
