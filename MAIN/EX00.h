@@ -33,4 +33,5 @@ void EX00_17();                        // IF E ELSE TOMADA DE DECISÕES SIMPLES U
 void EX00_18();                        // TOMADA DE DECISÃO SIMPLES COMPARANDO VALORES
 void EX00_19();                        // DEFINE UMA CONSTANTE E COMPARA OS VALORES
 void EX00_20();                        // A SAIDA PODE CONFUNDIR
+void EX00_21();                        // PONTEIRO PARA FUNÇÃO
 #endif // EX00

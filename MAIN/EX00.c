@@ -296,6 +296,26 @@ void EX00_14(void)
     puts("\n***************************\n");
 }
 
+// ************************ PONTEIROS PARA FUNÇÃO *********************
+//************************* INICIO DA FUNÇÃO SOMAR ********************
+int soma(int a, int b)
+{
+    return a+b;                        // FUNÇÃO SOMAR
+}
+//***************************FIM DA FUNÇÃO SOMAR   ********************
+void EX00_21()
+{
+    int x,y,z;
+    int (*p)(int,int);
+    printf("DIGITE 2 NUMEROS: (TECLE ENTER PARA CADA UM)");
+    scanf("%d %d",&x,&y);
+    p=soma;
+    z=p(x,y);                       // PONTEIRO RECEBE O ENDEREÇO DA FUNÇÃO
+    printf("Soma = %d\n",z);
+
+    puts("\n***************************\n");
+}
+
 // ************************ PG 254 ************************************
 void EX00_15(void)
 {
