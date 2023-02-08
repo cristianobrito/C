@@ -298,19 +298,19 @@ void EX00_14(void)
 
 // ************************ PONTEIROS PARA FUNÇÃO *********************
 //************************* INICIO DA FUNÇÃO SOMAR ********************
-int soma(int a, int b)
+int soma(int a, int b)                 // ELA RETORNA UM INTEIRO E RECEBE 2 INTEIROS a,b COMO PARAMETOS DE ENTRADA
 {
-    return a+b;                        // FUNÇÃO SOMAR
+    return a+b;                        // FUNÇÃO SOMAR RETORNA A SOMA DE a+b
 }
-//***************************FIM DA FUNÇÃO SOMAR   ********************
+//************************* FIM DA FUNÇÃO SOMAR ***********************
 void EX00_21()
 {
     int x,y,z;
-    int (*p)(int,int);
+    int (*p)(int,int);                 // PONTEIRO GUARDA O ENDEREÇO DE MEMORIA DA FUNÇÃO O TIPO DE RETORNO E OS PARAMETROS DEVEM SER DO MESMO TIPO DA FUNÇÃO
     printf("DIGITE 2 NUMEROS: (TECLE ENTER PARA CADA UM)");
     scanf("%d %d",&x,&y);
-    p=soma;
-    z=p(x,y);                       // PONTEIRO RECEBE O ENDEREÇO DA FUNÇÃO
+    p=soma;                            // PONTEIRO RECEBE O ENDEREÇO DA FUNÇÃO
+    z=p(x,y);                          // VARIAVEL RECEBE O VALOR DA SOMA PELO ENDEREÇO QUE O PONTEIRO PASSA
     printf("Soma = %d\n",z);
 
     puts("\n***************************\n");
