@@ -41,7 +41,7 @@ void EX00(void)
        usleep(1);                      // use sleep(500); e Sleep(500); com windows.h
        x++;
    }
-    puts("\n***************************\n");
+    puts("\n**************************************************************\n");
 }
 
 /*********************************************************
@@ -59,7 +59,7 @@ void EX00_1(void)
         usleep(55000);                 // MILESEGUNDOS SETADOS
         y++;
     }
-    puts("\n***************************\n");
+    puts("\n**************************************************************\n");
 }
 
 /*****************************************************************
@@ -82,7 +82,7 @@ void EX00_2(void)
     printf("%d\n",i);                  // %d ou %i int
     printf("%f\n",f);                  // %f float ou double
     printf("%f\n",d);                  // %f float ou double
-    puts("\n***************************\n");
+    puts("\n**************************************************************\n");
 }
 /************************************************************
     \b retrocesso
@@ -105,7 +105,7 @@ void EX00_3(void)
         sleep(1);                      // usleep(5000);
         x++;
     }
-    puts("\n***************************\n");
+    puts("\n**************************************************************\n");
 }
 //***************************************************************
 void EX00_4(void)
@@ -113,7 +113,7 @@ void EX00_4(void)
     printf("EX00_4\n");
     printf("meu nome e Cristiano sou programador\n\n");
 
-    puts("\n***************************\n");
+    puts("\n**************************************************************\n");
 }
 //***************************************************************
 
@@ -131,7 +131,7 @@ void EX00_5(void)
     printf("float \t%u\n", sizeof(f));
     printf("double\t%u\n", sizeof(d));
 
-    puts("\n***************************\n");
+    puts("\n**************************************************************\n");
 }
 // ************************** PG 78 - 85 ********************************
 void EX00_6(void)
@@ -142,7 +142,7 @@ void EX00_6(void)
     // VARIAVEL INTEIRA COM NUMEROS NEGATIVOS, NÃO PODE unsigned
     printf("o valor e %u esse numero e erro\n", ono);
 
-    puts("\n***************************\n");
+    puts("\n**************************************************************\n");
 }
 void EX00_7()
 {
@@ -152,7 +152,7 @@ void EX00_7()
     c = getchar();                     // USO DA FUNÇÃO GETCHAR();
     printf("peguei o caractere %c\n", c);
 
-    puts("\n***************************\n");
+    puts("\n**************************************************************\n");
 }
 /**********************************************************************
 *    Protótipos para getchar();
@@ -173,7 +173,7 @@ void EX00_8(void)
     putchar(ch);                       // ELE RECEBE UM CARACTERE LITERAL DENTRO DOS PARENTESIS
     putchar('!');
 
-    puts("\n***************************\n");
+    puts("\n**************************************************************\n");
 }
 // ***********************************************************************
 
@@ -185,7 +185,7 @@ void EX00_9(void)
     printf("\n%s", prompt);            // CARACTERE DE CONVERSÃO DE STRING %S
     getchar();                         // PAUSA O PROGRAMA
 
-    puts("\n***************************\n");
+    puts("\n**************************************************************\n");
 }
 
 // ************************* PG 91 ***************************************
@@ -197,7 +197,7 @@ void EX00_10(void)
     scanf("%s", nome);                 // SCANF() LE A ENTRADA DO TECLADO
     printf("Seja Bem Vindo %s.\n", nome);
 
-    puts("\n***************************\n");
+    puts("\n**************************************************************\n");
 }
 
 // ************************* PG 94 ***************************************
@@ -209,7 +209,7 @@ void EX00_11(void)
     fgets(nome,10,stdin);              // FGETS LE UM A MENOS PORTANTO 9
     printf("eu sou %s.\n", nome);      // EXIBE
 
-    puts("\n***************************\n");
+    puts("\n**************************************************************\n");
 }
 
 /************************************************************
@@ -238,7 +238,7 @@ void EX00_12(void)
         printf("\n%c", *pn++);
     }
 
-    puts("\n***************************\n");
+    puts("\n**************************************************************\n");
 
 }
 
@@ -265,7 +265,7 @@ void EX00_13(void)
 
     printf("\n%i : %i : %i\n", agora.hora, agora.minuto, agora.segundo);
 
-    puts("\n***************************\n");
+    puts("\n**************************************************************\n");
 }
 //********************* PONTEIROS ***********************************************
 void EX00_14(void)
@@ -293,7 +293,7 @@ void EX00_14(void)
     *hoje.psegundo=1000;               // ALTERA O VALOR EM TEMPO DE EXECUÇÃO
     printf("SEGUNDO ALTERADO: %i\n", *hoje.psegundo);
 
-    puts("\n***************************\n");
+    puts("\n**************************************************************\n");
 }
 
 // ************************ PONTEIROS PARA FUNÇÃO *********************
@@ -307,15 +307,40 @@ void EX00_21()
 {
     int x,y,z;
     int (*p)(int,int);                 // PONTEIRO GUARDA O ENDEREÇO DE MEMORIA DA FUNÇÃO O TIPO DE RETORNO E OS PARAMETROS DEVEM SER DO MESMO TIPO DA FUNÇÃO
+    printf("EX00_21\n");
     printf("DIGITE 2 NUMEROS: (TECLE ENTER PARA CADA UM)");
     scanf("%d %d",&x,&y);
     p=soma;                            // PONTEIRO RECEBE O ENDEREÇO DA FUNÇÃO
     z=p(x,y);                          // VARIAVEL RECEBE O VALOR DA SOMA PELO ENDEREÇO QUE O PONTEIRO PASSA
     printf("Soma = %d\n",z);
 
-    puts("\n***************************\n");
+    puts("\n**************************************************************\n");
 }
+// ************************ EX00_22 ***********************************
+// CONSIDERE O SEGUINTE PONTEIRO PRA FUNÇÃO int (*ptr)(int, int);
 
+int executa(int (*ptr)(int, int), int x, int y)            // A FUNÇÃO RECEBE COMO PARAMETRO O PONTEIRO PARA A FUNÇÃO UM VALOR X E UM VALOR Y
+{
+    return ptr(x,y);                                       // RETORNA O RESULTADO DA FUNÇÃO QUE ESTA ASSOCIADA AO POTEIRO
+}
+// ************************ FUNÇÕES MAX E SUB *************************
+int max(int a, int b){ return (a>b) ? a : b; }             // FUNÇÃO PARA CALCULAR O MAIOR VALOR ENTRE A E B
+int sub(int a, int b){ return a-b; }                       // SUBTRAÇÃO DE A E B
+// ********************************************************************
+void EX00_22()
+{
+    int x,y,z;
+    int (*p)(int,int);
+    printf("EX00_22\n");
+    printf("DIGITE 2 NUMEROS: (tecle enter para cada numero)");
+    scanf("%d %d",&x,&y);
+
+    printf("MAIOR       = %d\n",executa(max,x,y));
+    printf("SUBTRACAO   = %d\n",executa(sub,x,y));
+
+    puts("\n**************************************************************\n");
+
+}
 // ************************ PG 254 ************************************
 void EX00_15(void)
 {
@@ -323,7 +348,7 @@ void EX00_15(void)
     char string[] = "qual o tamanho de um array: ";
     printf("a string \"%s\" tem o tamanho %u.\n", string,sizeof(string));      // SIZEOF MOSTRA O TAMANHO
 
-    puts("\n***************************\n");
+    puts("\n**************************************************************\n");
 }
 
 // ************************ PG 255 ************************************
@@ -339,7 +364,7 @@ void EX00_16(void)
     };
     printf("tamanho da estruct robot %u.\n", sizeof(struct robot));            // %u OPERADOR DE SIZE OF
 
-    puts("\n***************************\n");
+    puts("\n**************************************************************\n");
 }
 /********************************************************************
 *
@@ -360,7 +385,7 @@ void EX00_17()
         printf("%d e maior que %d\n",a,b);
     }
 
-    puts("\n***************************\n");
+    puts("\n**************************************************************\n");
 }
 
 // ************************ PG 100 ***************************************
@@ -382,7 +407,7 @@ void EX00_18()
     {
         printf("%d e maior que %d", first,second);
     }
-    printf("\n**********************************\n");
+    puts("\n**************************************************************\n");
 }
 // ************************ PG 101 ***************************************
 #define SECRET 17                      // DEFINE UMA CONSTANTE
@@ -403,7 +428,7 @@ void EX00_19()
         return(1);
     }
 
-    puts("\n***************************\n");
+    puts("\n**************************************************************\n");
 }
 // ************************ EX00_20 **************************************
 void EX00_20()
@@ -414,6 +439,6 @@ void EX00_20()
     {
         printf("%d igual %d\n", a,-3);
     }
-    puts("\n***************************\n");
+    puts("\n**************************************************************\n");
 }
 // ************************ CAP 8 FIM ************************************

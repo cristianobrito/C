@@ -34,4 +34,5 @@ void EX00_18();                        // TOMADA DE DECISÃO SIMPLES COMPARANDO V
 void EX00_19();                        // DEFINE UMA CONSTANTE E COMPARA OS VALORES
 void EX00_20();                        // A SAIDA PODE CONFUNDIR
 void EX00_21();                        // PONTEIRO PARA FUNÇÃO
+void EX00_22();                        // PONTEIRO COMO PARAMETRO DE FUNÇÃO
 #endif // EX00
