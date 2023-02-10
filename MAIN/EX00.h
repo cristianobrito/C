@@ -35,4 +35,5 @@ void EX00_19();                        // DEFINE UMA CONSTANTE E COMPARA OS VALO
 void EX00_20();                        // A SAIDA PODE CONFUNDIR
 void EX00_21();                        // PONTEIRO PARA FUNÇÃO
 void EX00_22();                        // PONTEIRO COMO PARAMETRO DE FUNÇÃO
+void EX00_23();                        // MOSTRA UM DESENHO
 #endif // EX00
