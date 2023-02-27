@@ -466,3 +466,16 @@ void EX00_23()
     }
     puts("\n**************************************************************\n");
 }
+// ===============================  EX00_24 ===========================================
+void EX00_24()
+{
+  FILE *pont_arq;                      // criando a variável ponteiro para o arquivo
+  pont_arq = fopen("EX0024.txt", "a"); //abrindo o arquivo
+  fclose(pont_arq);                    // fechando arquivo
+
+  printf("O arquivo foi criado com sucesso!\n");
+
+  puts("\n**************************************************************\n");
+  system("pause");
+  return(0);
+}

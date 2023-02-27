@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
 #include "EX00.h"                      // CAMINHO PARCIAL OU COMPLETO SE ESTIVER FORA DA PASTA
 
 // COMENTEI O TRECHO ABAIXO POIS NÃO PRECISO COLOCAR OS PROTOTIPOS AQUI
@@ -53,5 +56,6 @@ int main()
     EX00_21();
     EX00_22();
     EX00_23();
+    EX00_24();
     return 0;
 }
