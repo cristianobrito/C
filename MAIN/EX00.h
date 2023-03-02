@@ -37,4 +37,5 @@ void EX00_21();                        // PONTEIRO PARA FUNÇÃO
 void EX00_22();                        // PONTEIRO COMO PARAMETRO DE FUNÇÃO
 void EX00_23();                        // MOSTRA UM DESENHO
 void EX00_24();                        // CRIA DIRETORIO
+void EX00_25();                        // PONTEIRO COMO NOTAÇÃO ARRAY
 #endif // EX00

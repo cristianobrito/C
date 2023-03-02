@@ -102,7 +102,7 @@ void EX00_3(void)
     while(falando[x] != '\0')
     {
         putchar(falando[x]);
-        sleep(1);                      // usleep(5000);
+        Sleep(1);                      // usleep(5000);
         x++;
     }
     puts("\n**************************************************************\n");
@@ -223,15 +223,16 @@ void EX00_12(void)
     int v[10];
     char nome[] = "onze de setembro";
     char *pn;                          // CRIA OS PONTEIROS LE SE PONTEIRO PRA CHAR
-    int  *pv;                          // CRIA OS PONTEIROS LE SE PONTEIRO PRA INT
+    int  *pv;
+    int b;                        // CRIA OS PONTEIROS LE SE PONTEIRO PRA INT
 
     pv=&v[0];                          // LEMBRE PONTEIRO SO ACEITA ENDEREÇOS DE MEMORIA
     pn=&nome[0];                       // SEMPRE INICIAMOS PEGANDO A PRIMEIRA POSIÇÃO DE UM CHAR[0]
 
-    for(int b=0;b<10;b++){             // TEMOS QUE USAR O LAÇO PARA PERCORRER O ARRAY
+    for(b=0;b<10;b++){             // TEMOS QUE USAR O LAÇO PARA PERCORRER O ARRAY
         v[b] = b*b;
     }
-    for(int b=0;b<10;b++){
+    for(b=0;b<10;b++){
         printf("\n%d %d",*pv++, v[b]);
     }
     while(*pn){
@@ -478,4 +479,28 @@ void EX00_24()
   puts("\n**************************************************************\n");
   system("pause");
   return(0);
+}
+
+// =============================== EX00_25 ===============================================
+void EX00_25()
+{
+    /*
+        notacao array pode ser substituida por ponteiro
+        num[0]             *ptr           pega a primeira posicao do array
+        num[1]             *(ptr+1)       pega a segunda posicao do array
+        todo potenira aponta para a primeira posicao de um array pois um array
+        e um ponteiro disfarcado
+    */
+    float num[5] = {75.1, 75.2, 75.3, 75.4, 75.5};
+    float *ptrF;
+    ptrF=num;
+    printf("%.1f\n", *(ptrF+3)); // mostra o valor da terceira posicao do array
+    printf("%.1f\n", *(ptrF+4)); // mostra o valora da ultima posicao do array
+    printf("%.1f", *(ptrF+0));   // mostra o valora da primeira posicao do array
+    puts("\n");
+
+    char *nome = "cristiano oliveira vai vencer";
+    while(putchar(*nome++));
+    puts("\n***********************************************************\n");
+    return(0);
 }
