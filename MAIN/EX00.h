@@ -39,3 +39,5 @@ void EX00_23();                        // MOSTRA UM DESENHO
 void EX00_24();                        // CRIA DIRETORIO
 void EX00_25();                        // PONTEIRO COMO NOTAÇÃO ARRAY
 #endif // EX00
+
+// adicionado
