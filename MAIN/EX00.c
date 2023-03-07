@@ -504,3 +504,25 @@ void EX00_25()
     puts("\n***********************************************************\n");
     return(0);
 }
+// =============================== EX00_26 ===============================================
+
+void EX00_26()
+{
+    /* array 3d */
+    /* para saber quantos elementos o array tem multiplicamos eles 2*2*2 = 8 elementos */
+    /* 2 niveis 2 linhas e 2 colunas */
+    int arr[2][2][2]= {0,1,2,3,4,5,6,7};
+    int x,y,z;
+
+    for(x=0;x<2;x++) /* percorre os niveis */
+    {
+        for(y=0;y<2;y++) /* percorre as linhas */
+        {
+            for(z=0;z<2;z++) /* percorre as colunas */
+            {
+                printf("N=[%d] L=[%d] C=[%d]  %d",x,y,z, arr[x][y][z]);
+                printf("\n");
+            }
+        }
+    }
+}
