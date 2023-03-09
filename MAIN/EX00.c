@@ -526,5 +526,13 @@ void EX00_26()
         }
     }
 }
+
+// ====================================================================
+
+void EX00_27()
+{
+    printf("irei reformatar o monstro para 2023");
+    puts("\n");
+}
 // criei um txt explicando o monstro e coloquei em readmes
 // e no diretorio f: monstro
