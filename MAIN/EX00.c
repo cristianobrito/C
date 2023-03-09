@@ -224,12 +224,12 @@ void EX00_12(void)
     char nome[] = "onze de setembro";
     char *pn;                          // CRIA OS PONTEIROS LE SE PONTEIRO PRA CHAR
     int  *pv;
-    int b;                        // CRIA OS PONTEIROS LE SE PONTEIRO PRA INT
+    int b;                             // CRIA OS PONTEIROS LE SE PONTEIRO PRA INT
 
     pv=&v[0];                          // LEMBRE PONTEIRO SO ACEITA ENDEREÇOS DE MEMORIA
     pn=&nome[0];                       // SEMPRE INICIAMOS PEGANDO A PRIMEIRA POSIÇÃO DE UM CHAR[0]
 
-    for(b=0;b<10;b++){             // TEMOS QUE USAR O LAÇO PARA PERCORRER O ARRAY
+    for(b=0;b<10;b++){                 // TEMOS QUE USAR O LAÇO PARA PERCORRER O ARRAY
         v[b] = b*b;
     }
     for(b=0;b<10;b++){
@@ -526,3 +526,5 @@ void EX00_26()
         }
     }
 }
+// criei um txt explicando o monstro e coloquei em readmes
+// e no diretorio f: monstro
