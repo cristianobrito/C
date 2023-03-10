@@ -534,5 +534,14 @@ void EX00_27()
     printf("irei reformatar o monstro para 2023");
     puts("\n");
 }
+
+void EX00_28()
+{
+    char buffer[20];
+    printf("pegando o buffer do arquivo ");
+    fgets(buffer,20,stdin);
+    printf("\n%s",buffer);
+
+}
 // criei um txt explicando o monstro e coloquei em readmes
 // e no diretorio f: monstro

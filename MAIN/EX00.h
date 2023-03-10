@@ -40,6 +40,7 @@ void EX00_24();                        // CRIA DIRETORIO
 void EX00_25();                        // PONTEIRO COMO NOTAÇÃO ARRAY
 void EX00_26();                        // ARRAY 3D
 void EX00_27();                        // AVISO
+void EX00_28();                        // FGETS DENOVO
 #endif // EX00
 
 // adicionado
